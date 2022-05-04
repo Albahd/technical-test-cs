@@ -1027,14 +1027,14 @@ let passwordValid = 0
 function Cont(string) {
     const search = string.split(":")[0]
     const letter = search[search.length - 1]
-    const min = string.split("-")[0]
-    const max = string.split("-")[1].split(" ")[0]
+    const pstO = string.split("-")[0]
+    const pstT = string.split("-")[1].split(" ")[0]
     const password = string.split(" ")[2]
-    console.log(letter, min, max, password)
+    console.log(letter, pstO, pstT, password)
     for (let i = 0; i < password.length; i++) {
-        if (password[min + 1] === letter && password[max + 1]) {
+        if (password[pstO + 1] === letter && password[pstT + 1]) {
             passwordValid-1
-        } else if(password[min + 1] === letter || password[max + 1]) {
+        } else if(password[pstO + 1] === letter || password[pstT + 1]) {
             passwordValid++
         }
     }
